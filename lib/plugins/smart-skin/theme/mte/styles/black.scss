@@ -1,0 +1,88 @@
+.app__black_theme {
+    // 主体颜色相关
+    --theme-color-primary: #4E86CF; // 主色，品牌色、链接
+    --theme-color-safe: #00994F; // 绿涨色，安全色
+    --theme-color-sale: #E05C2D; // 红跌色，卖出色
+    --theme-color-grey: #858999; // 平色
+    --theme-color-warn: #C78600; // 黄色，提醒
+    --theme-color-danger: #CC344A; // 红色，危险色
+    // 字体颜色
+    --font-color-1: rgba(240, 240, 255, 1);
+    --font-color-2: rgba(240, 240, 255, 0.7);
+    --font-color-3: rgba(240, 240, 255, 0.5);
+    --font-color-4: rgba(240, 240, 255, 0.3);
+    // 背景色
+    --bg-color: #000000;
+    // 前景色
+    --foreground-color: #18181a;
+    // 色块底色
+    --block-color: rgba(255, 255, 255, 0.08);
+    // 表格边框
+    --table-border-color: #303035;
+    // 浮层/弹窗
+    --popup-color: #2B2B30;
+    // 时间选择器渐变结束颜色
+    --s-ending-popup-color: rgba(43, 43, 48, 0.2);
+    // 分割线
+    --split-color: rgba(255, 255, 255, 0.1);
+    // 弹窗上的分割线
+    --popup-split-color: #303035;
+    // ----------以下没有在规范内---------TODO: 应该删除掉才对
+    // 开关边框
+    --switch-color: #555665;
+    // 国家组件index
+    --index-color: #6671FF;
+    // loading背景
+    --loading-color: #292933;
+    // 特色色块
+    --cheack-color: rgba(102, 113, 255, 0.1);
+    // 步骤条虚线颜色
+    --borderx-color: rgba(255, 255, 255, 0.50);
+    // 账户明细页字体颜色
+    --font-colorx: #D3D4E6;
+    // ----------ipo------------
+    // 弹框遮罩颜色
+    --dialog-color: rgba(0, 0, 0, .8);
+    // 分割线颜色
+    --solid-line: rgba(255, 255, 255, .1);
+    // 申请中标签颜色
+    --tag-color-1: rgba(196, 159, 0, 1);
+    // 申请中标签背景色
+    --tag-bg-color-1: rgba(196, 159, 0, .1);
+    // 申请通过标签颜色
+    --tag-color-2: rgba(0, 190, 74, 1);
+    // 申请通过标签背景色
+    --tag-bg-color-2: rgba(0, 190, 74, .1);
+    // 申请失败标签颜色
+    --tag-color-3: rgba(204, 52, 74, 1);
+    // 申请失败标签背景色
+    --tag-bg-color-3: rgba(204, 52, 74, .1);
+    // 申请完成标签颜色
+    --tag-color-4: rgba(42, 110, 204, 1);
+    // 申请完成标签背景色
+    --tag-bg-color-4: rgba(42, 110, 204, .1);
+    // 申请失败/撤销标签颜色
+    --tag-color-5: rgba(240, 240, 255, .5);
+    // 申请失败/撤销标签背景色
+    --tag-bg-color-5: rgba(240, 240, 255, .1);
+    // 小圆圈边框颜色
+    --circle-border-color: rgba(16, 16, 20, 0.1);
+    //toast背景色
+    --s-toast-bg-color: #303035;
+    //toast取消按钮边框色
+    --s-toast-cancel-border: rgba(240, 240, 255, 0.50);
+    //loading背景色
+    --s-loading-bg-color: #2B2B30;
+    //签名框背景色
+    --sign-box-bg-color: rgba(255, 255, 255, 0.08);
+    // 弹窗输入框背景色
+    --s-popup-input-bg-color: rgba(255, 255, 255, 0.08);
+    // 不可使用的按钮颜色
+    --s-button-disabled-color: rgba(102, 113, 255, 0.4);
+    // 百分比输入框边框颜色
+    --s-input-border-color: rgba(255, 255, 255, 0.1);
+    // tag/tab背景色
+    --s-tag-bg-color: rgba(102, 113, 255, 0.1);
+    // 浮窗背景色
+    --s-popup-bg-color: rgba(255, 255, 255, 0.08);
+}

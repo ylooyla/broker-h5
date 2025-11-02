@@ -1,0 +1,28 @@
+stages:
+  - release
+  - docs-build
+release:
+  stage: release
+  only:
+    refs:
+      - /^master$/
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /\-\-release/
+  script:
+    - echo pwd
+    - pwd
+  tags:
+    - webci_128
+
+docs-build:
+  stage: docs-build
+  only:
+    refs:
+      - /^master$/
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /\-\-docs/
+  script:
+    - sh ./.sh/docs-build.sh
+  tags:
+    - webci_128
+  

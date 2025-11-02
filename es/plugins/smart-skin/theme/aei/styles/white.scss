@@ -1,0 +1,86 @@
+:root {
+    // --------皮肤规范内有的--------
+    // 主体颜色相关
+    --theme-color-primary: #B99764; // 主色，品牌色、链接
+    --theme-color-safe: #00be4a; // 绿涨色，安全色
+    --theme-color-sale: #ff3853; // 红跌色，卖出色
+    --theme-color-grey: #858999; // 平色
+    --theme-color-warn: #f9a800; // 黄色，提醒
+    --theme-color-danger: #ee3d3d; // 红色，危险色
+    // 字体颜色
+    --font-color-1: #2a2a34;
+    --font-color-2: #555665;
+    --font-color-3: #888996;
+    --font-color-4: #c4c5ce;
+    // 背景色
+    --bg-color: #f8f9fc;
+    // 前景色
+    --foreground-color: #ffffff;
+    // 色块底色
+    --block-color: rgba(248, 249, 252, 1);
+    // 表格边框
+    --table-border-color: #eaeaea;
+    // 浮层/弹窗/分割线
+    --popup-color: #ffffff;
+    // 时间选择器渐变结束颜色
+    --s-ending-popup-color: rgba(221, 221, 221, 0.2);
+    // 分割线
+    --split-color: rgba(221, 221, 221, 1);
+    // 弹窗上的分割线
+    --popup-split-color: #dddddd;
+    // 开关边框
+    --switch-color: #555665;
+    // 国家组件index
+    --index-color: #323233;
+    // loading背景 输入框的背景
+    --loading-color: #f3f4f9;
+    // 特色色块
+    --cheack-color: #f8f9fc;
+    // 步骤条虚线颜色
+    --borderx-color: #c4c5ce;
+    // 账户明细页字体颜色
+    --font-colorx: #ffffff;
+    // ----------ipo------------
+    // 弹框遮罩颜色
+    --dialog-color: rgba(42, 42, 52, 0.4);
+    // 分割线颜色
+    --solid-line: #dddddd;
+    // 申请中标签颜色
+    --tag-color-1: rgba(196, 159, 0, 1);
+    // 申请中标签背景色
+    --tag-bg-color-1: rgba(196, 159, 0, 0.1);
+    // 申请通过标签颜色
+    --tag-color-2: rgba(0, 190, 74, 1);
+    // 申请通过标签背景色
+    --tag-bg-color-2: rgba(0, 190, 74, 0.1);
+    // 申请失败标签颜色
+    --tag-color-3: rgba(204, 52, 74, 1);
+    // 申请失败标签背景色
+    --tag-bg-color-3: rgba(204, 52, 74, 0.1);
+    // 申请完成标签颜色
+    --tag-color-4: rgba(42, 110, 204, 1);
+    // 申请完成标签背景色
+    --tag-bg-color-4: rgba(42, 110, 204, 0.1);
+    // 申请失败/撤销标签颜色
+    --tag-color-5: rgba(240, 240, 255, 0.5);
+    // 申请失败/撤销标签背景色
+    --tag-bg-color-5: rgba(240, 240, 255, 0.1);
+    // 小圆圈边框颜色
+    --circle-border-color: rgba(255, 255, 255, 0.1);
+    //toast背景色
+    --s-toast-bg-color: rgba(42, 42, 52, 0.9);
+
+    --s-toast-cancel-border: #EAEAEA;
+    //loading背景色
+    --s-loading-bg-color: rgb(42, 42, 52, 0.9);
+    //签名框背景色
+    --sign-box-bg-color: #f3f4f9;
+    // 弹窗输入框背景色
+    --s-popup-input-bg-color: #F8F9FC;
+    // 不可使用的按钮颜色
+    --s-button-disabled-color: rgba(185, 151, 100, 0.4);
+    // 百分比输入框边框颜色
+    --s-input-border-color: rgba(185, 151, 100, 0.1);
+    // 浮窗背景色
+    --s-popup-bg-color: #FFFFFF;
+}

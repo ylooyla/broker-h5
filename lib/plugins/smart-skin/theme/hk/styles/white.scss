@@ -1,0 +1,70 @@
+:root {
+    // --------皮肤规范内有的--------
+    // 主体颜色相关
+    --theme-color-primary: #006CFF; // 主色，品牌色、链接
+    --theme-color-safe: #00BA60; // 绿涨色，安全色
+    --theme-color-sale: #FF295A; // 红跌色，卖出色
+    --theme-color-grey: #ACACAC; // 平色 x
+    --theme-color-warn: #FF7127; // 橙色，提醒 x
+    --theme-color-danger: #FF7127; // 橙色，危险色 x
+    // 字体颜色
+    --font-color-1: #000000;
+    --font-color-2: #666666;
+    --font-color-3: #999999;
+    --font-color-4: #C8C9CB
+    // 背景色
+    --bg-color: #F8F9FB;
+    // 前景色
+    --foreground-color: #ffffff;
+    // 色块底色
+    --block-color: rgba(248, 249,251, 0.7);
+    // 表格边框
+    --table-border-color: rgba(0, 0, 0, 0.05);
+    // 浮层/弹窗
+    --popup-color: #ffffff;
+    // 分割线
+    --split-color: rgba(0, 0, 0, 0.05);
+    // 弹窗上的分割线
+    --popup-split-color: rgba(0, 0, 0, 0.05);
+    // 开关边框
+    --switch-color: #555665;
+    // 国家组件index
+    --index-color: #323233;
+    // loading背景
+    --loading-color: #222222;
+    // 特色色块
+    --cheack-color: #f8f9fb;
+    // 步骤条虚线颜色
+    --borderx-color: rgba(0, 0, 0, 0.05);
+    // 账户明细页字体颜色
+    --font-colorx: #ffffff;
+    // ----------ipo------------
+    // 弹框遮罩颜色
+    --dialog-color: rgba(0,0,0,0.5);
+    // 分割线颜色
+    --solid-line: rgba(0, 0, 0, 0.05);
+    // 申请中标签色
+    --tag-bg-color-1: rgba(255, 186, 0, 1);
+    // 申请通过标签颜色
+    --tag-color-2: rgba(0, 145, 255, 1);
+    // 申请完成标签颜色
+    --tag-color-2: rgba(65, 202, 30, 1);
+    // 申请失败/撤销标签颜色
+    --tag-color-5: rgba(134, 134, 134, 1);
+    //toast背景色
+    --s-toast-bg-color: rgba(34, 34, 34, 1);
+    //toast取消按钮边框色
+    --s-toast-cancel-border: rgba(153, 153, 153, 1);
+    //loading背景色
+    --s-loading-bg-color: rgba(34, 34, 34, 1);
+    //签名框线框色
+    --sign-box-bg-color: rgba(0, 0, 0, 0.05);
+    // 弹窗输入框线框色
+    --s-popup-input-bg-color: (0, 0, 0, 0.05);
+    // 不可使用的按钮颜色
+    --s-button-disabled-color: rgba(200, 201, 203, 1);
+    // 百分比输入框边框颜色
+    --s-input-border-color: rgba (0, 0, 0, 0.05);
+    // 浮窗背景色
+    --s-popup-bg-color: #FFFFFF;
+}
