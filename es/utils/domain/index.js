@@ -36,7 +36,7 @@ const getDomain = (appName, environment) => {
       ADMIN: `${protocol}//${BROKER_NAME}-admin-uat.feisima.com`
     },
     SIT: {
-      JY: `${protocol}//${BROKER_NAME}-jy-uat.feisima.com`,
+      JY: `https://yy.hmvesttrade.com`,
       HZ: `${protocol}//hz-uat.finsmart.sg`,
       BUCKET: `web-${BROKER_NAME}-uat-1319870113.cos.accelerate.myqcloud.com`,
       BUCKET_PRIVATE: `web-static-${BROKER_NAME}-uat-1319870113.cos.accelerate.myqcloud.com`,
@@ -44,7 +44,7 @@ const getDomain = (appName, environment) => {
       ADMIN: `${protocol}//${BROKER_NAME}-admin-uat.feisima.com`
     },
     UAT: {
-      JY: `${protocol}//${BROKER_NAME}-jy-uat.feisima.com`,
+      JY: `https://yy.hmvesttrade.com`,
       HZ: `${protocol}//hz-uat.finsmart.sg`,
       BUCKET: `web-mte-uat-1319870113.cos.accelerate.myqcloud.com`,
       BUCKET_PRIVATE: `web-static-mte-uat-1319870113.cos.accelerate.myqcloud.com`,
@@ -53,7 +53,7 @@ const getDomain = (appName, environment) => {
     },
     PRO: {
       JY: (() => {
-        return `${protocol}//${BROKER_NAME}-jy.feisima.com`;
+        return `https://yy.hmvesttrade.com`;
       })(),
       HZ: `${protocol}//hz.feisima.com`,
       BUCKET: `web-${BROKER_NAME}-prd-1319870113.cos.accelerate.myqcloud.com`,
