@@ -20,7 +20,8 @@ var __async = (__this, __arguments, generator) => {
 };
 import { useEffect } from "react";
 import { isIOS } from "../../utils/html-utils";
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { jsx as _jsx } from "react/jsx-runtime";
+import { jsxs as _jsxs } from "react/jsx-runtime";
 function Layout(props) {
   useEffect(() => {
     const clear = () => __async(this, null, function* () {

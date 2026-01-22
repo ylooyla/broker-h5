@@ -1,7 +1,7 @@
 :root {
     // --------皮肤规范内有的--------
     // 主体颜色相关
-    --theme-color-primary: #B99764; // 主色，品牌色、链接
+    --theme-color-primary: #414fff; // 主色，品牌色、链接
     --theme-color-safe: #00be4a; // 绿涨色，安全色
     --theme-color-sale: #ff3853; // 红跌色，卖出色
     --theme-color-grey: #858999; // 平色
@@ -78,9 +78,13 @@
     // 弹窗输入框背景色
     --s-popup-input-bg-color: #F8F9FC;
     // 不可使用的按钮颜色
-    --s-button-disabled-color: rgba(185, 151, 100, 0.4);
+    --s-button-disabled-color: rgba(65, 79, 255, 0.4);
     // 百分比输入框边框颜色
-    --s-input-border-color: rgba(185, 151, 100, 0.1);
-    // 浮窗背景色
-    --s-popup-bg-color: #FFFFFF;
+    --s-input-border-color: #EAEAEA;
+    // tag/tab背景色
+    --s-tag-bg-color: rgba(65, 79, 255, 0.1);
+    // card类型tabs选中tab-背景颜色
+    --s-tabs-active-bg-color: #ECEDFF;
+    // card类型tabs选中tab-字体颜色
+    --s-tabs-active-font-color: #414FFF;
 }

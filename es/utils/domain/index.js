@@ -22,42 +22,52 @@ const getDomain = (appName, environment) => {
     LOCAL: {
       JY: ORIGIN + "/proxy-jy-host",
       HZ: ORIGIN + "/proxy-hz-host",
-      BUCKET: `web-mte-uat-1319870113.cos.accelerate.myqcloud.com`,
-      BUCKET_PRIVATE: `web-static-mte-uat-1319870113.cos.accelerate.myqcloud.com`,
+      SW_JY: ORIGIN + "/proxy-sw-jy-host",
+      ND_JY: ORIGIN + "/proxy-nd-jy-host",
+      BUCKET: `web-static-mte-uat-1319870113.cos.accelerate.myqcloud.com`,
+      BUCKET_PRIVATE: `web-mte-uat-1319870113.cos.accelerate.myqcloud.com`,
       M: `http://${BROKER_NAME}-m-uat.feisima.com`,
       ADMIN: `http://${BROKER_NAME}-admin-uat.feisima.com`
     },
     DEV: {
       JY: `${protocol}//${BROKER_NAME}-jy-uat.feisima.com`,
       HZ: `${protocol}//hz-uat.finsmart.sg`,
-      BUCKET: `web-${BROKER_NAME}-uat-1319870113.cos.accelerate.myqcloud.com`,
-      BUCKET_PRIVATE: `web-static-${BROKER_NAME}-uat-1319870113.cos.accelerate.myqcloud.com`,
+      SW_JY: `${protocol}//sw-jy-sit.usmartsg.com`,
+      ND_JY: `${protocol}//nd-jy-sit.usmartsg.com`,
+      BUCKET: `web-static-mte-uat-1319870113.cos.accelerate.myqcloud.com`,
+      BUCKET_PRIVATE: `web-mte-uat-1319870113.cos.accelerate.myqcloud.com`,
       M: `${protocol}//${BROKER_NAME}-m-uat.feisima.com`,
       ADMIN: `${protocol}//${BROKER_NAME}-admin-uat.feisima.com`
     },
     SIT: {
-      JY: `https://yy.hmvesttrade.com`,
+      JY: `${protocol}//${BROKER_NAME}-jy-uat.feisima.com`,
       HZ: `${protocol}//hz-uat.finsmart.sg`,
-      BUCKET: `web-${BROKER_NAME}-uat-1319870113.cos.accelerate.myqcloud.com`,
-      BUCKET_PRIVATE: `web-static-${BROKER_NAME}-uat-1319870113.cos.accelerate.myqcloud.com`,
+      SW_JY: `${protocol}//sw-jy-sit.usmartsg.com`,
+      ND_JY: `${protocol}//nd-jy-sit.usmartsg.com`,
+      BUCKET: `web-static-mte-uat-1319870113.cos.accelerate.myqcloud.com`,
+      BUCKET_PRIVATE: `web-mte-uat-1319870113.cos.accelerate.myqcloud.com`,
       M: `${protocol}//${BROKER_NAME}-m-uat.feisima.com`,
       ADMIN: `${protocol}//${BROKER_NAME}-admin-uat.feisima.com`
     },
     UAT: {
-      JY: `https://yy.hmvesttrade.com`,
+      JY: `${protocol}//${BROKER_NAME}-jy-uat.feisima.com`,
       HZ: `${protocol}//hz-uat.finsmart.sg`,
-      BUCKET: `web-mte-uat-1319870113.cos.accelerate.myqcloud.com`,
-      BUCKET_PRIVATE: `web-static-mte-uat-1319870113.cos.accelerate.myqcloud.com`,
+      SW_JY: `${protocol}//sw-jy-uat.usmartsg.com`,
+      ND_JY: `${protocol}//nd-jy-uat.usmartsg.com`,
+      BUCKET: `web-static-mte-uat-1319870113.cos.accelerate.myqcloud.com`,
+      BUCKET_PRIVATE: `web-mte-uat-1319870113.cos.accelerate.myqcloud.com`,
       M: `${protocol}//${BROKER_NAME}-m-uat.feisima.com`,
       ADMIN: `${protocol}//${BROKER_NAME}-admin-uat.feisima.com`
     },
     PRO: {
       JY: (() => {
-        return `https://yy.hmvesttrade.com`;
+        return `${protocol}//${BROKER_NAME}-jy.feisima.com`;
       })(),
       HZ: `${protocol}//hz.feisima.com`,
-      BUCKET: `web-${BROKER_NAME}-prd-1319870113.cos.accelerate.myqcloud.com`,
-      BUCKET_PRIVATE: `web-static-${BROKER_NAME}-prd-1319870113.cos.accelerate.myqcloud.com`,
+      SW_JY: `${protocol}//sw-broker.feisima.com`,
+      ND_JY: `${protocol}//nd-jy.usmartsg.com`,
+      BUCKET: `web-static-${BROKER_NAME}-prd-1319870113.cos.accelerate.myqcloud.com`,
+      BUCKET_PRIVATE: `web-${BROKER_NAME}-prd-1319870113.cos.accelerate.myqcloud.com`,
       M: (() => {
         return `${protocol}//${BROKER_NAME}-m.feisima.com`;
       })(),

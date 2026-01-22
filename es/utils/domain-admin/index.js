@@ -39,7 +39,8 @@ const Environment = {
 };
 const ENV = envName;
 const isMatchingSystem = (keywords, appName2) => {
-  return keywords.some((keyword) => HOSTNAME.includes(keyword)) || process.env.VUE_APP_NAME === appName2;
+  var _a;
+  return keywords.some((keyword) => HOSTNAME.includes(keyword)) || window.__BROKER_APP_NAME__ === appName2 || typeof process !== "undefined" && ((_a = process.env) == null ? void 0 : _a.VUE_APP_NAME) === appName2;
 };
 const SYSTEM = {
   FINS: isMatchingSystem(["fins-"], "fins"),
@@ -49,7 +50,9 @@ const SYSTEM = {
   TA: isMatchingSystem(["ta-"], "ta"),
   GC: isMatchingSystem(["GCSECINT", "gcsecint", "gc-", "capforce-"], "gc"),
   DCMSG: isMatchingSystem(["dcmsg-"], "dcmsg"),
-  AEI: isMatchingSystem(["aei-"], "aei")
+  AEI: isMatchingSystem(["aei-"], "aei"),
+  SWHY: isMatchingSystem(["swhy-"], "swhy") || isMatchingSystem(["maribank-"], "maribank"),
+  MARIBANK: isMatchingSystem(["maribank-"], "maribank")
 };
 const IS_FINS = SYSTEM.FINS;
 const IS_FINSMART = SYSTEM.FINSMART;
@@ -59,6 +62,8 @@ const IS_TA = SYSTEM.TA;
 const IS_GC = SYSTEM.GC;
 const IS_DCMSG = SYSTEM.DCMSG;
 const IS_AEI = SYSTEM.AEI;
+const IS_SWHY = SYSTEM.SWHY;
+const IS_MARIBANK = SYSTEM.MARIBANK;
 const APP_TYPES = {
   FINS: 1e3,
   MTE: 1001,
@@ -66,7 +71,9 @@ const APP_TYPES = {
   TA: 1003,
   GC: 1004,
   DCMSG: 1005,
-  AEI: 1010
+  SWHY: 1009,
+  AEI: 1010,
+  MARIBANK: 1011
 };
 const APP_TYPE_KEY_MAP = Object.keys(APP_TYPES).reduce((map, key) => {
   map[APP_TYPES[key]] = key.toLowerCase();
@@ -87,6 +94,10 @@ const getAppType = () => {
     return APP_TYPES.DCMSG;
   if (SYSTEM.AEI)
     return APP_TYPES.AEI;
+  if (SYSTEM.SWHY)
+    return APP_TYPES.SWHY;
+  if (SYSTEM.MARIBANK)
+    return APP_TYPES.MARIBANK;
   return APP_TYPES.MERCURY;
 };
 const getAppName = () => {
@@ -101,10 +112,11 @@ const appType = getAppType();
 const appName = getAppName();
 const getMHost = (env) => {
   if (IS_FINSMART) {
-    return env === "UAT" ? "m-uat.finsmart.sg" : "m.finsmart.sg";
+    return env === "UAT" || env === "SIT" ? "m-uat.finsmart.sg" : "m.finsmart.sg";
   }
   const SUFFIX_MAP = {
     LOCAL: "m-uat.feisima.com",
+    SIT: "m-sit.feisima.com",
     UAT: "m-uat.feisima.com",
     PROD: "m.feisima.com"
   };
@@ -114,7 +126,7 @@ const getMHost = (env) => {
 };
 const getBucketEnv = () => {
   const BUCKETENVMap = {
-    uat: Environment.IS_UAT || Environment.IS_LOCAL,
+    uat: Environment.IS_UAT || Environment.IS_SIT || Environment.IS_LOCAL,
     prd: Environment.IS_PROD
   };
   for (const key in BUCKETENVMap) {
@@ -131,7 +143,22 @@ const MAP_API = {
     HZ: ORIGIN + "/proxy-hz-host",
     HZ_OPEN: ORIGIN + "/proxy-hz_open-host",
     OPEN: ORIGIN + "/proxy-open-host",
+    SWHY_JY: ORIGIN + "/proxy-swhy-host",
+    ND_JY: ORIGIN + "/proxy-nd-jy-host",
     MH: `${PROTOCOL}//${getMHost("UAT")}`,
+    FINSMART_BUCKET: `web-static-finsmart-uat-1319870113.cos.accelerate.myqcloud.com`,
+    FINSMART_BUCKET_PRIVATE: `web-finsmart-uat-1319870113.cos.accelerate.myqcloud.com`,
+    BUCKET: `web-static-${IS_FINSMART ? "finsmart" : "mte"}-uat-1319870113.cos.accelerate.myqcloud.com`,
+    BUCKET_PRIVATE: `web-${IS_FINSMART ? "finsmart" : "mte"}-uat-1319870113.cos.accelerate.myqcloud.com`
+  },
+  SIT: {
+    ADMIN: ORIGIN,
+    SWHY_JY: `${PROTOCOL}//sw-jy-sit.usmartsg.com`,
+    ND_JY: `${PROTOCOL}//nd-jy-sit.usmartsg.com`,
+    HZ: `${PROTOCOL}//hz-uat.finsmart.sg`,
+    HZ_OPEN: `${PROTOCOL}//open-hz-uat.finsmart.sg`,
+    OPEN: `${PROTOCOL}//open-uat.finsmart.sg`,
+    MH: `${PROTOCOL}//${getMHost("SIT")}`,
     FINSMART_BUCKET: `web-static-finsmart-uat-1319870113.cos.accelerate.myqcloud.com`,
     FINSMART_BUCKET_PRIVATE: `web-finsmart-uat-1319870113.cos.accelerate.myqcloud.com`,
     BUCKET: `web-static-${IS_FINSMART ? "finsmart" : "mte"}-uat-1319870113.cos.accelerate.myqcloud.com`,
@@ -139,6 +166,8 @@ const MAP_API = {
   },
   UAT: {
     ADMIN: ORIGIN,
+    SWHY_JY: `${PROTOCOL}//sw-jy-uat.usmartsg.com`,
+    ND_JY: `${PROTOCOL}//nd-jy-uat.usmartsg.com`,
     HZ: `${PROTOCOL}//hz-uat.finsmart.sg`,
     HZ_OPEN: `${PROTOCOL}//open-hz-uat.finsmart.sg`,
     OPEN: `${PROTOCOL}//open-uat.finsmart.sg`,
@@ -150,6 +179,8 @@ const MAP_API = {
   },
   PROD: {
     ADMIN: ORIGIN,
+    SWHY_JY: `${PROTOCOL}//sw-broker.feisima.com`,
+    ND_JY: `${PROTOCOL}//nd-jy.usmartsg.com`,
     HZ: `${PROTOCOL}//hz.feisima.com`,
     HZ_OPEN: `${PROTOCOL}//hz-open.feisima.com:8443`,
     OPEN: `${PROTOCOL}//open.finsmart.sg`,
@@ -177,6 +208,8 @@ var stdin_default = __spreadProps(__spreadValues({}, Environment), {
   IS_GC,
   IS_DCMSG,
   IS_AEI,
+  IS_SWHY,
+  IS_MARIBANK,
   appType,
   appName,
   ENV,
@@ -192,8 +225,10 @@ export {
   IS_FINS,
   IS_FINSMART,
   IS_GC,
+  IS_MARIBANK,
   IS_MERCURY,
   IS_MTE,
+  IS_SWHY,
   IS_TA,
   SYSTEM,
   appName,

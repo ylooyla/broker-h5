@@ -1,6 +1,6 @@
 .app__black_theme {
     // 主体颜色相关
-    --theme-color-primary: #C29E69; // 主色，品牌色、链接
+    --theme-color-primary: #6671FF; // 主色，品牌色、链接
     --theme-color-safe: #00994F; // 绿涨色，安全色
     --theme-color-sale: #E05C2D; // 红跌色，卖出色
     --theme-color-grey: #858999; // 平色
@@ -35,7 +35,7 @@
     // loading背景
     --loading-color: #292933;
     // 特色色块
-    --cheack-color: rgba(194, 158, 105, 0.1);
+    --cheack-color: rgba(102, 113, 255, 0.1);
     // 步骤条虚线颜色
     --borderx-color: rgba(255, 255, 255, 0.50);
     // 账户明细页字体颜色
@@ -78,9 +78,13 @@
     // 弹窗输入框背景色
     --s-popup-input-bg-color: rgba(255, 255, 255, 0.08);
     // 不可使用的按钮颜色
-    --s-button-disabled-color: rgba(194, 158, 105, 0.4);
+    --s-button-disabled-color: rgba(102, 113, 255, 0.4);
     // 百分比输入框边框颜色
     --s-input-border-color: rgba(255, 255, 255, 0.1);
-    // 浮窗背景色
-    --s-popup-bg-color: rgba(255, 255, 255, 0.08);
+    // tag/tab背景色
+    --s-tag-bg-color: rgba(102, 113, 255, 0.1);
+    // card类型tabs选中tab背景颜色
+    --s-tabs-active-bg-color: rgba(255, 255, 255, 0.1);
+    // card类型tabs选中tab-字体颜色
+    --s-tabs-active-font-color: #D3D4E6;
 }
